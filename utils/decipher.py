@@ -1,4 +1,4 @@
-from bot import ImageBot
+from utils.bot import ImageBot
 
 
 def decipher(image_path: str, bot: ImageBot) -> str:

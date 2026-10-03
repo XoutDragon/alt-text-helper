@@ -1,7 +1,12 @@
 import pyttsx3
 
-#runs tts by the use of inbuilt tts on a computer
-engine = pyttsx3.init()
+def tts(text: str):
+    # Skip non-spoken syntax characters if present
+    text = text.strip()
+    if not text:
+        return
 
-engine.say(get_response)
-engine.runAndWait()
+    engine = pyttsx3.init()
+        
+    engine.say(text)
+    engine.runAndWait()
