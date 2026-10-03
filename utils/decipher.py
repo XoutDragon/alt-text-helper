@@ -1,0 +1,3 @@
+import ImageBot
+
+bot = ImageBot()
