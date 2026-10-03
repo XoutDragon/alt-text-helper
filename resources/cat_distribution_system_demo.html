@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Distribution System</title>
+  <style>
+    :root {
+      --bg: #f8f6f2;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6470;
+      --accent: #c96f4a;
+      --accent-soft: #f4dfd5;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 1rem;
+      font-size: 2.6rem;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .intro {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 1rem 1rem 1.25rem;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .flow {
+      margin-top: 2.5rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .flow-item {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 1rem;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+
+    .flow-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .flow-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .note {
+      margin-top: 2rem;
+      background: var(--accent-soft);
+      border-left: 6px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 2rem 1rem 3rem;
+    }
+
+    @media (max-width: 720px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .flow-item {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Cat Distribution System</h1>
+    <p>
+      Welcome to the official guide for understanding how the Cat Distribution System works.
+      This page explains how cats are matched, transported, received, and happily integrated into their new homes.
+    </p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>How it works</h2>
+      <p>
+        The Cat Distribution System is a highly sophisticated process that begins when a person becomes ready for feline assignment.
+        The system reviews household conditions, cat temperament, readiness signals, and local cat availability.
+        Once these factors line up, the system advances the cat through each stage below.
+      </p>
+    </section>
+
+    <section class="steps">
+      <article class="card">
+        <img src="1.png">
+        <div class="card-content">
+          <h2>Step 1: Eligibility Detection</h2>
+          <p>
+            The system first identifies a human with suitable lap space, emotional openness, and acceptable snack storage.
+            This stage determines whether cat placement can begin.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="2.png">
+        <div class="card-content">
+          <h2>Step 2: Cat Assignment</h2>
+          <p>
+            A cat is selected based on personality alignment. Important factors include cuddle tolerance, curiosity level, and preferred nap geometry.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="3.png">
+        <div class="card-content">
+          <h2>Step 3: Transit Planning</h2>
+          <p>
+            The system organizes movement from current location to target human. This may occur through shelter adoption, neighborhood wandering, or surprise porch appearance.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="4.png">
+        <div class="card-content">
+          <h2>Step 4: Initial Contact</h2>
+          <p>
+            The cat makes first contact. This usually includes direct eye contact, slow blinking, or immediate occupation of a chair that was clearly in use.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="5.png">
+        <div class="card-content">
+          <h2>Step 5: Home Integration</h2>
+          <p>
+            Once accepted, the cat maps the household, tests surfaces for nap suitability, and establishes ownership of at least one blanket.
+          </p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="6.png">
+        <div class="card-content">
+          <h2>Step 6: Ongoing Oversight</h2>
+          <p>
+            The system remains active after delivery. It monitors food bowl refill speed, play frequency, and whether the human understands that the cat now runs the home.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="flow">
+      <h2>Visual process flow</h2>
+      <div class="flow-grid">
+        <div class="flow-item">
+          <img src="7.png">
+          <div>
+            <h3>Readiness signal appears</h3>
+            <p>
+              The process begins when the future owner shows clear signs of readiness, such as discussing cats too often or leaving windows open for dramatic staring.
+            </p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <img src="8.png">
+          <div>
+            <h3>Matching engine activates</h3>
+            <p>
+              The matching engine compares available cats with the household profile and chooses a likely ruler for the space.
+            </p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <img src="9.png">
+          <div>
+            <h3>Claiming behavior begins</h3>
+            <p>
+              The assigned cat confirms placement by selecting furniture, bags, keyboards, or laps as priority territory.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>Cat Distribution System Educational Demo</p>
+  </footer>
+</body>
+</html>
