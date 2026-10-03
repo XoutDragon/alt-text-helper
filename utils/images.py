@@ -7,7 +7,8 @@ import regex as re
 def get_images_from_file(filename):
     with open(filename, "rb") as f:
         html = f.read().decode("utf-8")
-
+        
+        #looks over the html file and looks for the <img> tag and if it does return it
         return re.findall("<img[^>]+src=\"([^\"]+)\"", html)
 
 print(get_images_from_file("./resources/cat_distribution_system_demo.html"))

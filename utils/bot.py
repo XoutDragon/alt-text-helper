@@ -1,7 +1,6 @@
 from typing import Optional
 
 from openai import OpenAI
-
 #import AI to receive image and be able to check the image when needed
 class ImageBot(OpenAI):
     def __init__(self, model, url, api_key) -> None:
