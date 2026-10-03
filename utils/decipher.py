@@ -1,15 +1,13 @@
-import os
 from bot import ImageBot
-from dotenv import load_dotenv
-
-load_dotenv()
 
 
-def decipher(images=[]):
-    url = os.getenv("BASE_URL")
-    api_key = os.getenv("API_KEY")
-    bot = ImageBot("gemini-3.8-flash", url, api_key)
-    print("Worked!")
-    return
+def decipher(image_path: str, bot: ImageBot) -> str:
 
-decipher()
+    print(f"Found image: {image_path}")
+
+    alt_text = bot.get_response(
+        user_prompt="Generate a detailed alt text description for this image.",
+        image_input=image_path,
+    )
+    print(f"\n[Image: {image_path}]\nAlt Text: {alt_text}")
+    return alt_text
