@@ -9,5 +9,7 @@ if __name__ == "__main__":
 
 
     images = images.get_images_from_file("resources/cat_distribution_system_demo.html")
-    text = decipher.decipher(images)
+
+    for image in images:
+        text = decipher.decipher(image)
   
