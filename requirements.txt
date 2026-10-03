@@ -1,1 +1,5 @@
+# Write requirements.txt file for the project
+
+# This file lists the dependencies for the project.
+#openai is the library for interacting with OpenAI's API
 openai
