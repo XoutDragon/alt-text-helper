@@ -1,17 +1,26 @@
 from typing import Optional
-
 from openai import OpenAI
-#import AI to receive image and be able to check the image when needed
+
+
 class ImageBot(OpenAI):
-    def __init__(self, model, url, api_key) -> None:
-        super().__init__()
-        self.base_url = url
-        self.api_key = api_key
+
+    def __init__(self, model: str, url: Optional[str], api_key: str) -> None:
+        super().__init__(
+            api_key=api_key,
+            base_url=url,
+        )
         self.model = model
 
-    def get_response(self, system_prompt: Optional[str], user_prompt: str) -> str:
+    def get_response(
+        self, system_prompt: Optional[str], user_prompt: str
+    ) -> str:
+        messages = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": user_prompt})
+
         response = self.chat.completions.create(
-            models=self.model,
-            messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": user_prompt}],
+            model=self.model,
+            messages=messages,
         )
-        return response.choices[0].message.content
+        return response.choices[0].message.content or ""
